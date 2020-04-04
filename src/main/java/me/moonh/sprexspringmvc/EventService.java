@@ -10,16 +10,19 @@ public class EventService {
 
     public List<Event> getEvents(){
         Event event1 = Event.builder()
-                .name("스프링 웹 mvc 스터디")
+                .name("스프링 웹 mvc 스터디 1차")
+                .limitOfEnrollment(5)
                 .startDateTime(LocalDateTime.of(2020,3,28,10,0))
                 .endDateTime(LocalDateTime.of(2020,3,28,20,0))
                 .build();
 
         Event event2 = Event.builder()
-                .name("스프링 웹 mvc 스터디")
+                .name("스프링 웹 mvc 스터디 2차")
+                .limitOfEnrollment(5)
                 .startDateTime(LocalDateTime.of(2020,3,28,10,0))
                 .endDateTime(LocalDateTime.of(2020,3,28,20,0))
                 .build();
+        return List.of(event1,event2);
     }
 
 }
